@@ -9,7 +9,7 @@ from components import (
     make_header_metrics,
     make_timeseries,
     make_bar_chart,
-    make_popular_locations_table,
+    make_locations_table,
 )
 from functions import brand_list
 
@@ -87,7 +87,7 @@ def update_figures(hover):
             cb.color1,
             f"{cb.name} Total Recorded Visits by Day of Week",
         )
-        tbl = make_popular_locations_table(cb.filtered_df)
+        tbl = make_locations_table(cb.filtered_df)
     else:
         header_metrics = make_header_metrics(cb.make_metrics(cb.df))
         ts_fig = make_timeseries(
@@ -96,7 +96,7 @@ def update_figures(hover):
         bar_fig = make_bar_chart(
             cb.df, cb.color1, f"{cb.name} Total Recorded Visits by Day of Week",
         )
-        tbl = make_popular_locations_table(cb.df)
+        tbl = make_locations_table(cb.df)
 
     return (header_metrics, ts_fig, bar_fig, tbl)
 
