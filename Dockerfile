@@ -5,4 +5,4 @@ RUN pip install --no-cache-dir -r requirements.txt && pip install --no-cache-dir
 
 EXPOSE 8080
 
-CMD gunicorn -b 0.0.0.0:80 app.app:server
+CMD gunicorn -b 0.0.0.0:80 main:server
