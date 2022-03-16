@@ -19,7 +19,7 @@ geojson == 2.5.0
 h3 == 3.7.3
 
 # D:\OneDrive\Personal\Python\fast_food_dash\test.ipynb: 5
-numpy == 1.19.5
+numpy == 1.21.0
 
 # D:\OneDrive\Personal\Python\fast_food_dash\functions.py: 1
 # D:\OneDrive\Personal\Python\fast_food_dash\src\data_subset.ipynb: 1
