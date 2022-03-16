@@ -1,0 +1,6 @@
+name,field,units,description,agg
+Total Visits,total_visits,visits,The total SafeGraph visits at brand stores during 2021,sum
+Android Visits,android,android visits,The number of SafeGraph visits at brand stores from an Android device,sum
+iOS Visits,ios,iOS visits,The number of SafeGraph visits at brand stores from an iOS device,sum
+Number of Stores,latitude,stores,The number of different brand stores,nunique
+Median Visit Time,median_dwell,minutes,The median number of minutes spent at the brand store,median
