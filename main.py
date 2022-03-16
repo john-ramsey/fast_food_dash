@@ -13,10 +13,10 @@ from components import (
 )
 from functions import brand_list
 
+cb = None
 app = Dash(__name__, external_stylesheets=[dbc.themes.ZEPHYR])
 
 server = app.server
-
 
 app.layout = html.Div(
     children=[
@@ -41,7 +41,7 @@ app.layout = html.Div(
         ),
     ],
     id="body",
-)  # navbar
+)
 
 
 @app.callback(

@@ -2,7 +2,6 @@ import dash_bootstrap_components as dbc
 from dash import html
 import random
 import plotly.express as px
-import os
 from functions import brand_list, get_secret
 
 brand_dropdown = dbc.Select(
