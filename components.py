@@ -2,7 +2,8 @@ import dash_bootstrap_components as dbc
 from dash import html
 import random
 import plotly.express as px
-from functions import brand_list, get_secret
+from functions import brand_list
+import os
 
 brand_dropdown = dbc.Select(
     id="brand_dropdown",
@@ -48,7 +49,7 @@ def make_map(df, geojson_obj, value_field, colorscale):
     fig.update_layout(
         margin={"r": 20, "t": 0, "l": 0, "b": 1},
         mapbox_style="light",
-        mapbox_accesstoken=get_secret("mapbox_key"),
+        mapbox_accesstoken=os.getenv("mapbox_key"),
         coloraxis_colorbar=dict(title="2021 Visits"),
     )
     return fig
@@ -195,7 +196,13 @@ def make_locations_table(df):
         .reset_index()
         .sort_values(by="total_visits", ascending=False)
         .head(10)
-        .rename(columns={"street_address": "Address", "postal_code": "Zip"})
+        .rename(
+            columns={
+                "street_address": "Address",
+                "postal_code": "Zip",
+                "total_visits": "Visits",
+            }
+        )
     )
     return dbc.Table.from_dataframe(
         table_df, striped=True, bordered=True, hover=True, size="sm"

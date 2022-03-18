@@ -2,7 +2,6 @@ import pandas as pd
 import h3
 from geojson import Feature, FeatureCollection
 from shapely.geometry import Polygon
-from google.cloud import secretmanager
 
 
 class FastFoodBrand:
@@ -94,20 +93,3 @@ brand_list = [
     )
     for i, r in pd.read_csv("brands.csv").iterrows()
 ]
-
-
-def get_secret(key, project_id="github-demos-344303"):
-    """ Returns the google cloud secret from the specified project and key
-
-    Args:
-        key (str): The secret we which to access
-        project_id (str, optional): The project to which the secret belongs. Defaults to "github-demos-344303".
-
-    Returns:
-        Google Cloud Secret Value
-    """
-    client = secretmanager.SecretManagerServiceClient()
-    name = f"projects/{project_id}/secrets/{key}/versions/latest"
-    response = client.access_secret_version(name=name)
-    value = response.payload.data.decode("UTF-8")
-    return value
