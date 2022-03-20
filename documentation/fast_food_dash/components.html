@@ -1,0 +1,564 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+<meta name="generator" content="pdoc 0.10.0" />
+<title>fast_food_dash.components API documentation</title>
+<meta name="description" content="" />
+<link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/sanitize.min.css" integrity="sha256-PK9q560IAAa6WVRRh76LtCaI8pjTJ2z11v0miyNNjrs=" crossorigin>
+<link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/typography.min.css" integrity="sha256-7l/o7C8jubJiy74VsKTidCy1yBkRtiUGbVkYBylBqUg=" crossorigin>
+<link rel="stylesheet preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/styles/github.min.css" crossorigin>
+<style>:root{--highlight-color:#fe9}.flex{display:flex !important}body{line-height:1.5em}#content{padding:20px}#sidebar{padding:30px;overflow:hidden}#sidebar > *:last-child{margin-bottom:2cm}.http-server-breadcrumbs{font-size:130%;margin:0 0 15px 0}#footer{font-size:.75em;padding:5px 30px;border-top:1px solid #ddd;text-align:right}#footer p{margin:0 0 0 1em;display:inline-block}#footer p:last-child{margin-right:30px}h1,h2,h3,h4,h5{font-weight:300}h1{font-size:2.5em;line-height:1.1em}h2{font-size:1.75em;margin:1em 0 .50em 0}h3{font-size:1.4em;margin:25px 0 10px 0}h4{margin:0;font-size:105%}h1:target,h2:target,h3:target,h4:target,h5:target,h6:target{background:var(--highlight-color);padding:.2em 0}a{color:#058;text-decoration:none;transition:color .3s ease-in-out}a:hover{color:#e82}.title code{font-weight:bold}h2[id^="header-"]{margin-top:2em}.ident{color:#900}pre code{background:#f8f8f8;font-size:.8em;line-height:1.4em}code{background:#f2f2f1;padding:1px 4px;overflow-wrap:break-word}h1 code{background:transparent}pre{background:#f8f8f8;border:0;border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin:1em 0;padding:1ex}#http-server-module-list{display:flex;flex-flow:column}#http-server-module-list div{display:flex}#http-server-module-list dt{min-width:10%}#http-server-module-list p{margin-top:0}.toc ul,#index{list-style-type:none;margin:0;padding:0}#index code{background:transparent}#index h3{border-bottom:1px solid #ddd}#index ul{padding:0}#index h4{margin-top:.6em;font-weight:bold}@media (min-width:200ex){#index .two-column{column-count:2}}@media (min-width:300ex){#index .two-column{column-count:3}}dl{margin-bottom:2em}dl dl:last-child{margin-bottom:4em}dd{margin:0 0 1em 3em}#header-classes + dl > dd{margin-bottom:3em}dd dd{margin-left:2em}dd p{margin:10px 0}.name{background:#eee;font-weight:bold;font-size:.85em;padding:5px 10px;display:inline-block;min-width:40%}.name:hover{background:#e0e0e0}dt:target .name{background:var(--highlight-color)}.name > span:first-child{white-space:nowrap}.name.class > span:nth-child(2){margin-left:.4em}.inherited{color:#999;border-left:5px solid #eee;padding-left:1em}.inheritance em{font-style:normal;font-weight:bold}.desc h2{font-weight:400;font-size:1.25em}.desc h3{font-size:1em}.desc dt code{background:inherit}.source summary,.git-link-div{color:#666;text-align:right;font-weight:400;font-size:.8em;text-transform:uppercase}.source summary > *{white-space:nowrap;cursor:pointer}.git-link{color:inherit;margin-left:1em}.source pre{max-height:500px;overflow:auto;margin:0}.source pre code{font-size:12px;overflow:visible}.hlist{list-style:none}.hlist li{display:inline}.hlist li:after{content:',\2002'}.hlist li:last-child:after{content:none}.hlist .hlist{display:inline;padding-left:1em}img{max-width:100%}td{padding:0 .5em}.admonition{padding:.1em .5em;margin-bottom:1em}.admonition-title{font-weight:bold}.admonition.note,.admonition.info,.admonition.important{background:#aef}.admonition.todo,.admonition.versionadded,.admonition.tip,.admonition.hint{background:#dfd}.admonition.warning,.admonition.versionchanged,.admonition.deprecated{background:#fd4}.admonition.error,.admonition.danger,.admonition.caution{background:lightpink}</style>
+<style media="screen and (min-width: 700px)">@media screen and (min-width:700px){#sidebar{width:30%;height:100vh;overflow:auto;position:sticky;top:0}#content{width:70%;max-width:100ch;padding:3em 4em;border-left:1px solid #ddd}pre code{font-size:1em}.item .name{font-size:1em}main{display:flex;flex-direction:row-reverse;justify-content:flex-end}.toc ul ul,#index ul{padding-left:1.5em}.toc > ul > li{margin-top:.5em}}</style>
+<style media="print">@media print{#sidebar h1{page-break-before:always}.source{display:none}}@media print{*{background:transparent !important;color:#000 !important;box-shadow:none !important;text-shadow:none !important}a[href]:after{content:" (" attr(href) ")";font-size:90%}a[href][title]:after{content:none}abbr[title]:after{content:" (" attr(title) ")"}.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:""}pre,blockquote{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}tr,img{page-break-inside:avoid}img{max-width:100% !important}@page{margin:0.5cm}p,h2,h3{orphans:3;widows:3}h1,h2,h3,h4,h5,h6{page-break-after:avoid}}</style>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/highlight.min.js" integrity="sha256-Uv3H6lx7dJmRfRvH8TH6kJD1TSK1aFcwgx+mdg3epi8=" crossorigin></script>
+<script>window.addEventListener('DOMContentLoaded', () => hljs.initHighlighting())</script>
+</head>
+<body>
+<main>
+<article id="content">
+<header>
+<h1 class="title">Module <code>fast_food_dash.components</code></h1>
+</header>
+<section id="section-intro">
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">import dash_bootstrap_components as dbc
+from dash import html
+import random
+import plotly.express as px
+from functions import brand_list
+import os
+
+brand_dropdown = dbc.Select(
+    id=&#34;brand_dropdown&#34;,
+    options=[{&#34;label&#34;: b.name, &#34;value&#34;: i} for i, b in enumerate(brand_list)],
+    value=random.randint(0, len(brand_list) - 1),
+)
+
+navbar = dbc.NavbarSimple(
+    children=[brand_dropdown],
+    brand=&#34;Fast Food Dashboard&#34;,
+    brand_href=&#34;#&#34;,
+    color=&#34;dark&#34;,
+    dark=True,
+    id=&#34;navbar&#34;,
+)
+
+
+def make_map(df, geojson_obj, value_field, colorscale):
+    &#34;&#34;&#34;Makes a plotly mapbox choropleth map of union of the grouped dataframe and the geojson object.
+    The user must have a mapbox token in order to use this function as the environmental variable &#34;mapbox_key&#34; (see https://docs.mapbox.com/help/getting-started/access-tokens/).
+    Args:
+        df (Pandas Dataframe): The dataframe containing the data grouped by hexagon
+        geojson_obj (GeoJSON): The geojson object containing the hexagons and their embedded metric values
+        value_field (str): The column name of the metric which is used to color the map
+        colorscale (list): The colorscale to use for the map formatted as a list of [value, color] pairs where value is bounded between 0 and 1
+    Returns:
+        Plotly Map Figure
+    &#34;&#34;&#34;
+
+    fig = px.choropleth_mapbox(
+        df,
+        geojson=geojson_obj,
+        locations=f&#34;h3_cell&#34;,
+        color=value_field,
+        color_continuous_scale=colorscale,
+        zoom=8,
+        center={&#34;lat&#34;: 33.995679, &#34;lon&#34;: -118.164765},
+        opacity=0.45,
+        # height=800,
+        labels={&#34;color&#34;: &#34;2021 Visits&#34;},
+    )
+
+    fig.update_layout(
+        margin={&#34;r&#34;: 20, &#34;t&#34;: 0, &#34;l&#34;: 0, &#34;b&#34;: 1},
+        mapbox_style=&#34;light&#34;,
+        mapbox_accesstoken=os.getenv(&#34;mapbox_key&#34;),
+        coloraxis_colorbar=dict(title=&#34;2021 Visits&#34;),
+    )
+    return fig
+
+
+def make_timeseries(df, field, color, title):
+    &#34;&#34;&#34; Makes a plotly timeseries plot for the specified field.
+
+    Args:
+        df (Pandas Dataframe): The dataframe containing the data across time
+        field (str): The field on the dataframe to plot
+        color (str): The hex code of the color to use for the plot
+        title (str): The plot title
+
+    Returns:
+        Plotly Graph Object
+    &#34;&#34;&#34;
+    fig = px.line(
+        df[[&#34;week_start_date&#34;, field]].groupby(&#34;week_start_date&#34;).sum().reset_index(),
+        x=&#34;week_start_date&#34;,
+        y=field,
+        title=title,
+        color_discrete_sequence=[color],
+        labels={&#34;week_start_date&#34;: &#34;Week Start Date&#34;, &#34;total_visits&#34;: &#34;Visits by Week&#34;},
+        height=375,
+    )
+
+    return fig
+
+
+def make_bar_chart(df, color, title):
+    &#34;&#34;&#34;_summary_
+
+    Args:
+        df (Pandas Dataframe): The dataframe containing the visits by day
+        color (str): The hex code of the color to use for the plot
+        title (str): The plot title
+
+    Returns:
+        Plotly Graph Object
+    &#34;&#34;&#34;
+    days = [
+        &#34;Monday&#34;,
+        &#34;Tuesday&#34;,
+        &#34;Wednesday&#34;,
+        &#34;Thursday&#34;,
+        &#34;Friday&#34;,
+        &#34;Saturday&#34;,
+        &#34;Sunday&#34;,
+    ]
+
+    # subset to just the days of the week and sum the visits
+    df = df[days].sum()
+
+    fig = px.bar(
+        df,
+        x=df.index,
+        y=df.values,
+        color_discrete_sequence=[color],
+        title=title,
+        labels={&#34;index&#34;: &#34;&#34;, &#34;y&#34;: &#34;Visits&#34;},
+        height=375,
+    )
+
+    return fig
+
+
+def make_header_metrics(metrics):
+    &#34;&#34;&#34;_summary_
+
+    Args:
+        metrics (dict): A dictionary in the format of {metric value : metric details}. Think of this as an inverted traditional dictionary. This solution is not applicable in all cases.
+
+    Returns:
+        Dash Bootstrap Row containing the metrics
+    &#34;&#34;&#34;
+
+    metric_header = [
+        dbc.Row(
+            [
+                dbc.Col(
+                    [
+                        dbc.ListGroup(
+                            [
+                                dbc.ListGroupItem(
+                                    [
+                                        html.H5(d[&#34;name&#34;], className=&#34;mb-2&#34;,),  # title
+                                        html.Div(
+                                            [
+                                                html.H4(
+                                                    f&#34;{v:,.0f}&#34;,
+                                                    style={&#34;display&#34;: &#34;inline&#34;,},
+                                                ),  # value
+                                                html.Small(
+                                                    f&#34;      {d[&#39;units&#39;]}&#34;,  # 2 tabs for appropriate spacing
+                                                    className=&#34;text-muted&#34;,
+                                                    style={&#34;display&#34;: &#34;inline&#34;,},
+                                                ),  # units
+                                            ],
+                                            style={&#34;margin-top&#34;: &#34;auto&#34;},
+                                        ),
+                                        dbc.Tooltip(
+                                            [
+                                                html.Small(d[&#34;description&#34;]),
+                                            ],  # definition
+                                            target=f&#34;{d[&#39;field&#39;]}_list_group_item&#34;,
+                                        ),
+                                    ],
+                                    class_name=&#34;w-50&#34;,
+                                    id=f&#34;{d[&#39;field&#39;]}_list_group_item&#34;,
+                                    style={
+                                        &#34;display&#34;: &#34;flex&#34;,
+                                        &#34;flex-direction&#34;: &#34;column&#34;,
+                                    },
+                                )
+                                for v, d in metrics.items()
+                            ],
+                            horizontal=True,
+                            className=&#34;mb-2&#34;,
+                            id=&#34;market_metrics_list_group&#34;,
+                        ),
+                    ],
+                    width=10,
+                )
+            ],
+            justify=&#34;center&#34;,
+        )
+    ]
+    return metric_header
+
+
+def make_locations_table(df):
+    &#34;&#34;&#34; Create the bootstrap table for use in the dash app from the provided dataframe
+
+    Args:
+        df (Pandas Dataframe): The dataframe containing the visits by location
+        
+    Returns:
+        Dash Bootstrap Table
+    &#34;&#34;&#34;
+    table_df = (
+        df.groupby([&#34;street_address&#34;, &#34;postal_code&#34;])[&#34;total_visits&#34;]
+        .sum()
+        .reset_index()
+        .sort_values(by=&#34;total_visits&#34;, ascending=False)
+        .head(10)
+        .rename(
+            columns={
+                &#34;street_address&#34;: &#34;Address&#34;,
+                &#34;postal_code&#34;: &#34;Zip&#34;,
+                &#34;total_visits&#34;: &#34;Visits&#34;,
+            }
+        )
+    )
+    return dbc.Table.from_dataframe(
+        table_df, striped=True, bordered=True, hover=True, size=&#34;sm&#34;
+    )</code></pre>
+</details>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+<h2 class="section-title" id="header-functions">Functions</h2>
+<dl>
+<dt id="fast_food_dash.components.make_bar_chart"><code class="name flex">
+<span>def <span class="ident">make_bar_chart</span></span>(<span>df, color, title)</span>
+</code></dt>
+<dd>
+<div class="desc"><p><em>summary</em></p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>df</code></strong> :&ensp;<code>Pandas Dataframe</code></dt>
+<dd>The dataframe containing the visits by day</dd>
+<dt><strong><code>color</code></strong> :&ensp;<code>str</code></dt>
+<dd>The hex code of the color to use for the plot</dd>
+<dt><strong><code>title</code></strong> :&ensp;<code>str</code></dt>
+<dd>The plot title</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<p>Plotly Graph Object</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def make_bar_chart(df, color, title):
+    &#34;&#34;&#34;_summary_
+
+    Args:
+        df (Pandas Dataframe): The dataframe containing the visits by day
+        color (str): The hex code of the color to use for the plot
+        title (str): The plot title
+
+    Returns:
+        Plotly Graph Object
+    &#34;&#34;&#34;
+    days = [
+        &#34;Monday&#34;,
+        &#34;Tuesday&#34;,
+        &#34;Wednesday&#34;,
+        &#34;Thursday&#34;,
+        &#34;Friday&#34;,
+        &#34;Saturday&#34;,
+        &#34;Sunday&#34;,
+    ]
+
+    # subset to just the days of the week and sum the visits
+    df = df[days].sum()
+
+    fig = px.bar(
+        df,
+        x=df.index,
+        y=df.values,
+        color_discrete_sequence=[color],
+        title=title,
+        labels={&#34;index&#34;: &#34;&#34;, &#34;y&#34;: &#34;Visits&#34;},
+        height=375,
+    )
+
+    return fig</code></pre>
+</details>
+</dd>
+<dt id="fast_food_dash.components.make_header_metrics"><code class="name flex">
+<span>def <span class="ident">make_header_metrics</span></span>(<span>metrics)</span>
+</code></dt>
+<dd>
+<div class="desc"><p><em>summary</em></p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>metrics</code></strong> :&ensp;<code>dict</code></dt>
+<dd>A dictionary in the format of {metric value : metric details}. Think of this as an inverted traditional dictionary. This solution is not applicable in all cases.</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<p>Dash Bootstrap Row containing the metrics</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def make_header_metrics(metrics):
+    &#34;&#34;&#34;_summary_
+
+    Args:
+        metrics (dict): A dictionary in the format of {metric value : metric details}. Think of this as an inverted traditional dictionary. This solution is not applicable in all cases.
+
+    Returns:
+        Dash Bootstrap Row containing the metrics
+    &#34;&#34;&#34;
+
+    metric_header = [
+        dbc.Row(
+            [
+                dbc.Col(
+                    [
+                        dbc.ListGroup(
+                            [
+                                dbc.ListGroupItem(
+                                    [
+                                        html.H5(d[&#34;name&#34;], className=&#34;mb-2&#34;,),  # title
+                                        html.Div(
+                                            [
+                                                html.H4(
+                                                    f&#34;{v:,.0f}&#34;,
+                                                    style={&#34;display&#34;: &#34;inline&#34;,},
+                                                ),  # value
+                                                html.Small(
+                                                    f&#34;      {d[&#39;units&#39;]}&#34;,  # 2 tabs for appropriate spacing
+                                                    className=&#34;text-muted&#34;,
+                                                    style={&#34;display&#34;: &#34;inline&#34;,},
+                                                ),  # units
+                                            ],
+                                            style={&#34;margin-top&#34;: &#34;auto&#34;},
+                                        ),
+                                        dbc.Tooltip(
+                                            [
+                                                html.Small(d[&#34;description&#34;]),
+                                            ],  # definition
+                                            target=f&#34;{d[&#39;field&#39;]}_list_group_item&#34;,
+                                        ),
+                                    ],
+                                    class_name=&#34;w-50&#34;,
+                                    id=f&#34;{d[&#39;field&#39;]}_list_group_item&#34;,
+                                    style={
+                                        &#34;display&#34;: &#34;flex&#34;,
+                                        &#34;flex-direction&#34;: &#34;column&#34;,
+                                    },
+                                )
+                                for v, d in metrics.items()
+                            ],
+                            horizontal=True,
+                            className=&#34;mb-2&#34;,
+                            id=&#34;market_metrics_list_group&#34;,
+                        ),
+                    ],
+                    width=10,
+                )
+            ],
+            justify=&#34;center&#34;,
+        )
+    ]
+    return metric_header</code></pre>
+</details>
+</dd>
+<dt id="fast_food_dash.components.make_locations_table"><code class="name flex">
+<span>def <span class="ident">make_locations_table</span></span>(<span>df)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Create the bootstrap table for use in the dash app from the provided dataframe</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>df</code></strong> :&ensp;<code>Pandas Dataframe</code></dt>
+<dd>The dataframe containing the visits by location</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<p>Dash Bootstrap Table</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def make_locations_table(df):
+    &#34;&#34;&#34; Create the bootstrap table for use in the dash app from the provided dataframe
+
+    Args:
+        df (Pandas Dataframe): The dataframe containing the visits by location
+        
+    Returns:
+        Dash Bootstrap Table
+    &#34;&#34;&#34;
+    table_df = (
+        df.groupby([&#34;street_address&#34;, &#34;postal_code&#34;])[&#34;total_visits&#34;]
+        .sum()
+        .reset_index()
+        .sort_values(by=&#34;total_visits&#34;, ascending=False)
+        .head(10)
+        .rename(
+            columns={
+                &#34;street_address&#34;: &#34;Address&#34;,
+                &#34;postal_code&#34;: &#34;Zip&#34;,
+                &#34;total_visits&#34;: &#34;Visits&#34;,
+            }
+        )
+    )
+    return dbc.Table.from_dataframe(
+        table_df, striped=True, bordered=True, hover=True, size=&#34;sm&#34;
+    )</code></pre>
+</details>
+</dd>
+<dt id="fast_food_dash.components.make_map"><code class="name flex">
+<span>def <span class="ident">make_map</span></span>(<span>df, geojson_obj, value_field, colorscale)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Makes a plotly mapbox choropleth map of union of the grouped dataframe and the geojson object.
+The user must have a mapbox token in order to use this function as the environmental variable "mapbox_key" (see <a href="https://docs.mapbox.com/help/getting-started/access-tokens/">https://docs.mapbox.com/help/getting-started/access-tokens/</a>).</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>df</code></strong> :&ensp;<code>Pandas Dataframe</code></dt>
+<dd>The dataframe containing the data grouped by hexagon</dd>
+<dt><strong><code>geojson_obj</code></strong> :&ensp;<code>GeoJSON</code></dt>
+<dd>The geojson object containing the hexagons and their embedded metric values</dd>
+<dt><strong><code>value_field</code></strong> :&ensp;<code>str</code></dt>
+<dd>The column name of the metric which is used to color the map</dd>
+<dt><strong><code>colorscale</code></strong> :&ensp;<code>list</code></dt>
+<dd>The colorscale to use for the map formatted as a list of [value, color] pairs where value is bounded between 0 and 1</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<p>Plotly Map Figure</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def make_map(df, geojson_obj, value_field, colorscale):
+    &#34;&#34;&#34;Makes a plotly mapbox choropleth map of union of the grouped dataframe and the geojson object.
+    The user must have a mapbox token in order to use this function as the environmental variable &#34;mapbox_key&#34; (see https://docs.mapbox.com/help/getting-started/access-tokens/).
+    Args:
+        df (Pandas Dataframe): The dataframe containing the data grouped by hexagon
+        geojson_obj (GeoJSON): The geojson object containing the hexagons and their embedded metric values
+        value_field (str): The column name of the metric which is used to color the map
+        colorscale (list): The colorscale to use for the map formatted as a list of [value, color] pairs where value is bounded between 0 and 1
+    Returns:
+        Plotly Map Figure
+    &#34;&#34;&#34;
+
+    fig = px.choropleth_mapbox(
+        df,
+        geojson=geojson_obj,
+        locations=f&#34;h3_cell&#34;,
+        color=value_field,
+        color_continuous_scale=colorscale,
+        zoom=8,
+        center={&#34;lat&#34;: 33.995679, &#34;lon&#34;: -118.164765},
+        opacity=0.45,
+        # height=800,
+        labels={&#34;color&#34;: &#34;2021 Visits&#34;},
+    )
+
+    fig.update_layout(
+        margin={&#34;r&#34;: 20, &#34;t&#34;: 0, &#34;l&#34;: 0, &#34;b&#34;: 1},
+        mapbox_style=&#34;light&#34;,
+        mapbox_accesstoken=os.getenv(&#34;mapbox_key&#34;),
+        coloraxis_colorbar=dict(title=&#34;2021 Visits&#34;),
+    )
+    return fig</code></pre>
+</details>
+</dd>
+<dt id="fast_food_dash.components.make_timeseries"><code class="name flex">
+<span>def <span class="ident">make_timeseries</span></span>(<span>df, field, color, title)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Makes a plotly timeseries plot for the specified field.</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>df</code></strong> :&ensp;<code>Pandas Dataframe</code></dt>
+<dd>The dataframe containing the data across time</dd>
+<dt><strong><code>field</code></strong> :&ensp;<code>str</code></dt>
+<dd>The field on the dataframe to plot</dd>
+<dt><strong><code>color</code></strong> :&ensp;<code>str</code></dt>
+<dd>The hex code of the color to use for the plot</dd>
+<dt><strong><code>title</code></strong> :&ensp;<code>str</code></dt>
+<dd>The plot title</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<p>Plotly Graph Object</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def make_timeseries(df, field, color, title):
+    &#34;&#34;&#34; Makes a plotly timeseries plot for the specified field.
+
+    Args:
+        df (Pandas Dataframe): The dataframe containing the data across time
+        field (str): The field on the dataframe to plot
+        color (str): The hex code of the color to use for the plot
+        title (str): The plot title
+
+    Returns:
+        Plotly Graph Object
+    &#34;&#34;&#34;
+    fig = px.line(
+        df[[&#34;week_start_date&#34;, field]].groupby(&#34;week_start_date&#34;).sum().reset_index(),
+        x=&#34;week_start_date&#34;,
+        y=field,
+        title=title,
+        color_discrete_sequence=[color],
+        labels={&#34;week_start_date&#34;: &#34;Week Start Date&#34;, &#34;total_visits&#34;: &#34;Visits by Week&#34;},
+        height=375,
+    )
+
+    return fig</code></pre>
+</details>
+</dd>
+</dl>
+</section>
+<section>
+</section>
+</article>
+<nav id="sidebar">
+<h1>Index</h1>
+<div class="toc">
+<ul></ul>
+</div>
+<ul id="index">
+<li><h3>Super-module</h3>
+<ul>
+<li><code><a title="fast_food_dash" href="index.html">fast_food_dash</a></code></li>
+</ul>
+</li>
+<li><h3><a href="#header-functions">Functions</a></h3>
+<ul class="">
+<li><code><a title="fast_food_dash.components.make_bar_chart" href="#fast_food_dash.components.make_bar_chart">make_bar_chart</a></code></li>
+<li><code><a title="fast_food_dash.components.make_header_metrics" href="#fast_food_dash.components.make_header_metrics">make_header_metrics</a></code></li>
+<li><code><a title="fast_food_dash.components.make_locations_table" href="#fast_food_dash.components.make_locations_table">make_locations_table</a></code></li>
+<li><code><a title="fast_food_dash.components.make_map" href="#fast_food_dash.components.make_map">make_map</a></code></li>
+<li><code><a title="fast_food_dash.components.make_timeseries" href="#fast_food_dash.components.make_timeseries">make_timeseries</a></code></li>
+</ul>
+</li>
+</ul>
+</nav>
+</main>
+<footer id="footer">
+<p>Generated by <a href="https://pdoc3.github.io/pdoc" title="pdoc: Python API documentation generator"><cite>pdoc</cite> 0.10.0</a>.</p>
+</footer>
+</body>
+</html>
