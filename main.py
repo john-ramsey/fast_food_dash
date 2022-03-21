@@ -10,11 +10,13 @@ from components import (
     make_timeseries,
     make_bar_chart,
     make_locations_table,
+    brand_list,
 )
-from functions import brand_list
 
 cb = None
-app = Dash(__name__, external_stylesheets=[dbc.themes.ZEPHYR])
+app = Dash(
+    __name__, external_stylesheets=[dbc.themes.ZEPHYR], title="LA Fast Food Dashboard"
+)
 
 server = app.server
 
@@ -102,5 +104,5 @@ def update_figures(hover):
 
 
 if __name__ == "__main__":
-    app.run_server(debug=False, host="0.0.0.0", port=8080)
-    # app.run_server(debug=True)
+    # app.run_server(debug=False, host="0.0.0.0", port=8080)
+    app.run_server(debug=True)

@@ -1,5 +1,5 @@
 name,field,units,description,agg
-Total Visits,total_visits,visits,The total SafeGraph visits at brand stores during 2021,sum
+Recorded 2021 Visits,total_visits,visits,The total visits at brand stores in 2021 recorded by SafeGraph,sum
 Android Visits,android,android visits,The number of SafeGraph visits at brand stores from an Android device,sum
 iOS Visits,ios,iOS visits,The number of SafeGraph visits at brand stores from an iOS device,sum
 Number of Stores,latitude,stores,The number of different brand stores,nunique
