@@ -5,7 +5,7 @@ Shapely == 1.8.0
 
 # D:\OneDrive\Personal\Python\fast_food_dash\components.py: 2
 # D:\OneDrive\Personal\Python\fast_food_dash\main.py: 2
-dash == 2.2.0
+dash == 2.15.0
 
 # D:\OneDrive\Personal\Python\fast_food_dash\components.py: 1
 # D:\OneDrive\Personal\Python\fast_food_dash\main.py: 3
